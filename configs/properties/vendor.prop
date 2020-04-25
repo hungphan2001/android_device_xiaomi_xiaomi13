@@ -126,6 +126,9 @@ ro.bluetooth.a2dp_offload.supported=true
 camera.disable_zsl_mode=true
 ro.camera.enableCamera1MaxZsl=1
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # Display
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
