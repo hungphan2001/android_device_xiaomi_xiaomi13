@@ -401,6 +401,7 @@ PRODUCT_PACKAGES += \
     WifiResCommon \
     WifiResTarget \
     FrameworksResXiaomi13 \
+    SettingsProviderResXiaomi13 \
     SettingsResXiaomi13
 
 # Parts
