@@ -86,4 +86,8 @@
      -->
     <bool name="config_wifiAllowMultipleNetworksOnSameAwareNdi" translatable="false">true</bool>
 
+     <!-- A boolean indicate if device supports ser channel on the Aware data-path setup. If the
+    value is false, channel setting on the data-path request will be ignored.
+    -->
+    <bool name="config_wifiSupportChannelOnDataPath" translatable="false">true</bool>
 </resources>
