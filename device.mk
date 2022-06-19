@@ -394,6 +394,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResTarget \
     SystemUIResCommon \
+    SystemUIResXiaomi13 \
     SettingsResXiaomi \
     TelecommResCommon \
     TelephonyResCommon \
