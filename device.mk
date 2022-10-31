@@ -389,6 +389,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureResxiaomi13 \
     Xiaomi13CarrierConfigRes \
     Xiaomi13CarrierConfigResMiui \
     FrameworksResCommon \
