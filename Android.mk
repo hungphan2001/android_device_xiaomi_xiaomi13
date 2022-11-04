@@ -34,6 +34,22 @@ ALL_DEFAULT_INSTALLED_MODULES += \
     $(DSP_MOUNT_POINT) \
     $(VM_SYSTEM_MOUNT_POINT)
 
+EGL_LIB_SYMLINKS := $(TARGET_OUT_VENDOR)/lib
+$(EGL_LIB_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL lib symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
+	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
+	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
+
+EGL_LIB64_SYMLINKS := $(TARGET_OUT_VENDOR)/lib64
+$(EGL_LIB64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL lib64 symlinks: $@"
+	@mkdir -p $@
+	$(hide) ln -sf egl/libEGL_adreno.so $@/libEGL_adreno.so
+	$(hide) ln -sf egl/libGLESv2_adreno.so $@/libGLESv2_adreno.so
+	$(hide) ln -sf egl/libq3dtools_adreno.so $@/libq3dtools_adreno.so
+
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"
@@ -94,7 +110,7 @@ $(RFS_MSM_WPSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
 	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
 
-ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(RFS_MSM_WPSS_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(EGL_LIB_SYMLINKS) $(EGL_LIB64_SYMLINKS) $(RFS_MSM_ADSP_SYMLINKS) $(RFS_MSM_CDSP_SYMLINKS) $(RFS_MSM_MPSS_SYMLINKS) $(RFS_MSM_SLPI_SYMLINKS) $(RFS_MSM_WPSS_SYMLINKS)
 
 WIFI_FIRMWARE_SYMLINKS := $(TARGET_OUT_VENDOR)/firmware/
 $(WIFI_FIRMWARE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
