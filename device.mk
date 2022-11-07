@@ -391,6 +391,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon \
     FrameworksResTarget \
     SystemUIResCommon \
+    SettingsResXiaomi \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon \
