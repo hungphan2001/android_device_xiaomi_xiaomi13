@@ -315,6 +315,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/properties/odm_fuxi.prop:$(TARGET_COPY_OUT_ODM)/etc/build_fuxi.prop
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
