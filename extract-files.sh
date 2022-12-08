@@ -81,7 +81,10 @@ function blob_fixup() {
             ;;
         odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc|vendor/etc/init/hw/init.batterysecret.rc|vendor/etc/init/hw/init.mi_thermald.rc|vendor/etc/init/hw/init.qcom.usb.rc)
             sed -i 's/on charger/on property:init.svc.vendor.charger=running/g' "${2}"
-            ;;    
+            ;;
+        vendor/etc/msm_irqbalance.conf)
+            sed -i "s/IGNORED_IRQ=27,23,38$/&,115,332/" "${2}"
+            ;;      
     esac
 }
 
