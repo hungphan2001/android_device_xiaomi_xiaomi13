@@ -236,6 +236,9 @@ ro.incremental.enable=yes
 # Keystore
 ro.hardware.keystore_desede=true
 
+# HWUI
+ro.hwui.render_ahead=10
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
