@@ -385,7 +385,12 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     Xiaomi13CarrierConfigRes \
-    Xiaomi13CarrierConfigResMiui
+    Xiaomi13CarrierConfigResMiui \
+    FrameworksResCommon \
+    SystemUIResCommon \
+    TelecommResCommon \
+    TelephonyResCommon \
+    WifiResCommon
 
 # Parts
 #PRODUCT_PACKAGES += \
