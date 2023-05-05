@@ -387,10 +387,12 @@ PRODUCT_PACKAGES += \
     Xiaomi13CarrierConfigRes \
     Xiaomi13CarrierConfigResMiui \
     FrameworksResCommon \
+    FrameworksResTarget \
     SystemUIResCommon \
     TelecommResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    WifiResCommon \
+    WifiResTarget
 
 # Parts
 #PRODUCT_PACKAGES += \
