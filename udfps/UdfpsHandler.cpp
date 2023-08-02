@@ -233,7 +233,9 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             req.base.disp_id = MI_DISP_PRIMARY;
             req.local_hbm_value = LHBM_TARGET_BRIGHTNESS_OFF_FINGER_UP;
             ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
-            setFodStatus(FOD_STATUS_OFF);
+            if (!enrolling) {
+                setFodStatus(FOD_STATUS_OFF);
+            }
         } else if ((mSku == "fuxi" && (vendorCode == 20 || vendorCode == 22))
                 || (mSku == "nuwa" && (vendorCode == 21 || vendorCode == 23))) {
             /*
@@ -246,6 +248,23 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 
     void cancel() {
         LOG(DEBUG) << __func__;
+        enrolling = false;
+    }
+
+    void preEnroll() {
+        LOG(INFO) << __func__;
+        enrolling = true;
+    }
+
+    void enroll() {
+        LOG(INFO) << __func__;
+        enrolling = true;
+    }
+
+    void postEnroll() {
+        LOG(INFO) << __func__;
+        enrolling = false;
+
         setFodStatus(FOD_STATUS_OFF);
     }
 
