@@ -314,5 +314,9 @@ persist.vendor.qti.inputopts.enable=true
 persist.vendor.qti.inputopts.movetouchslop=0.6 
 ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
+# LMK properties
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=50
+
 # Zygote
 zygote.critical_window.minute=10
