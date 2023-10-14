@@ -261,6 +261,9 @@ persist.vendor.radio.redir_party_num=0
 ro.vendor.radio.build_profile=u-stable
 ro.vendor.radio.self_dev_flag=1
 
+# Sensors
+persist.vendor.sensors.debug.hal=0
+
 # USB
 sys.usb.mtp.batchcancel=1
 sys.usb.mtp.device_type=3
