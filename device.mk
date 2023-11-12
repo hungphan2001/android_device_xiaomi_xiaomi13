@@ -261,6 +261,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V2-ndk.vendor
 
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1.vendor
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
