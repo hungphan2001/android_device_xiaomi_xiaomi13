@@ -79,6 +79,9 @@ function blob_fixup() {
         vendor/lib64/c2.dolby.client.so)
             "${PATCHELF}" --add-needed "dolbycodec_shim.so" "${2}"
             ;;
+        odm/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc|vendor/etc/init/hw/init.batterysecret.rc|vendor/etc/init/hw/init.mi_thermald.rc|vendor/etc/init/hw/init.qcom.usb.rc)
+            sed -i 's/on charger/on property:init.svc.vendor.charger=running/g' "${2}"
+            ;;    
     esac
 }
 

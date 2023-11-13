@@ -367,7 +367,7 @@ on init && property:ro.boot.mode=charger
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
 
-on charger
+on property:init.svc.vendor.charger=running
     start vendor.power_off_alarm
     write /sys/kernel/cnss/charger_mode 1
     write /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled n
