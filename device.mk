@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
 
 # QTI
 PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti_vendor
 
 PRODUCT_COPY_FILES += \
