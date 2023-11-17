@@ -289,6 +289,9 @@ ro.vendor.radio.build_profile=u-stable
 ro.vendor.radio.build_region=global
 ro.vendor.radio.self_dev_flag=1
 
+# shutdown
+ro.build.shutdown_timeout=0
+
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
