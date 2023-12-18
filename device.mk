@@ -291,6 +291,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab.zram \
     init.kernel.post_boot.sh \
     init.kernel.post_boot-kalama.sh \
     init.target.rc \

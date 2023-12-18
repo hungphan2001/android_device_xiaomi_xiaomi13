@@ -16,3 +16,7 @@ service citsensor-hal-2-0 /odm/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-
     group system input
     override
     task_profiles ServiceCapacityLow
+
+ on property:sys.boot_completed=1
+     swapon_all /vendor/etc/fstab.zram
+   
