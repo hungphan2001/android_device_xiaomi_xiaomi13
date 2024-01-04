@@ -75,6 +75,8 @@
         <boolean name="carrier_disable_vice_sa_mode_bool" value="true" />
         <boolean name="hide_enable_2g_bool" value="true" />
         <boolean name="disable_filter_out_conference_host" value="false" />
+        <!-- PA: Enable LTE+ icon by default -->
+        <boolean name="hide_lte_plus_data_icon_bool" value="false"/>
     </carrier_config>
     <carrier_config sdk="26">
         <boolean name="vilte_data_is_metered_bool" value="false" />
