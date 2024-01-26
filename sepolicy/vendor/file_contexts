@@ -107,9 +107,6 @@
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor.xiaomi.sensor.citsensorservice@2.0-service u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 /(vendor|system/vendor|odm|vendor/odm)/bin/hw/vendor.xiaomi.sensor.communicate@1.0-service u:object_r:vendor_hal_sensorcommunicate_default_exec:s0
 
-# SLA
-/(vendor|system/vendor)/bin/hw/vendor\.qti\.sla\.service\@1\.0-service u:object_r:hal_slaservice_qti_exec:s0
-
 # SSR
 /sys/bus/msm_subsys/devices/subsys[0-9]+/name                  u:object_r:vendor_sysfs_ssr:s0
 /sys/bus/msm_subsys/devices/subsys[0-9]+/restart_level         u:object_r:vendor_sysfs_ssr_toggle:s0

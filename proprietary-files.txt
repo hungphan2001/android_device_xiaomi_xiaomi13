@@ -2744,12 +2744,6 @@ vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
-# SLA
-vendor/bin/hw/vendor.qti.sla.service@1.0-service
-vendor/etc/init/vendor.qti.sla.service@1.0-service.rc
-vendor/lib64/vendor.qti.sla.service@1.0-impl.so
-vendor/lib64/vendor.qti.sla.service@1.0.so
-
 # Soter
 mi_ext/product/app/QcomSoterService/QcomSoterService.apk:system_ext/app/QcomSoterService/QcomSoterService.apk|dae7de6141ae1467a4fdedf7bb7b64ec5ac7534a
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service

@@ -24,8 +24,3 @@ attribute vendor_hal_citsensorservice_xiaomi_server;
 attribute vendor_hal_sensorcommunicate;
 attribute vendor_hal_sensorcommunicate_client;
 attribute vendor_hal_sensorcommunicate_server;
-
-# SLA
-attribute hal_slaservice;
-attribute hal_slaservice_client;
-attribute hal_slaservice_server;
