@@ -442,9 +442,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    # Create the directory used by qrtr-lookup
-    mkdir /data/vendor/qrtr 0775 system system
-
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
@@ -531,8 +528,6 @@ on property:sys.boot_completed=1
     setprop lmkd.reinit 1
     chown media audio /sys/kernel/aud_dev/state
     write /sys/devices/virtual/cvp/cvp/boot 1
-    write /dev/kmsg "start qrtr-lookup after Boot completed "
-    start qrtr-lookup
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -985,10 +980,3 @@ on property:sys.boot_completed=1 && property:ro.build.type=user && property:ro.d
     chmod 0666 /sys/class/thermal/cooling_device48/cur_state
     chmod 0666 /sys/class/thermal/cooling_device49/cur_state
     chmod 0666 /sys/class/thermal/cooling_device50/cur_state
-
-service qrtr-lookup /vendor/bin/qrtr-lookup
-    class core
-    user system
-    group system
-    disabled
-    oneshot

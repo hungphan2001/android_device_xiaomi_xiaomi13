@@ -117,8 +117,6 @@ vendor.panel.display.                           u:object_r:vendor_fp_prop:s0
 ctl.vendor.hvdcp_opti                           u:object_r:vendor_hvdcp_opti_prop:s0
 
 # Mlipay
-persist.vendor.sys.pay.fido                     u:object_r:vendor_payment_security_prop:s0
-persist.vendor.sys.pay.fido2                    u:object_r:vendor_payment_security_prop:s0
 persist.vendor.sys.pay.ifaa                     u:object_r:vendor_payment_security_prop:s0
 persist.vendor.sys.pay.soter                    u:object_r:vendor_payment_security_prop:s0
 persist.vendor.sys.pay.widevine                 u:object_r:vendor_payment_security_prop:s0

@@ -20,10 +20,7 @@ vendor.xiaomi.hardware.micharge::IMiCharge u:object_r:vendor_hal_micharge_xiaomi
 vendor.xiaomi.hardware.misys::IMiSys       u:object_r:hal_misys_hwservice:s0
 
 # Mlipay
-vendor.xiaomi.hardware.mfidoca::IFidoService        u:object_r:hal_mfidoca_hwservice:s0
 vendor.xiaomi.hardware.mlipay::IMlipayService       u:object_r:hal_mlipay_hwservice:s0
-vendor.xiaomi.hardware.mtdservice::IMTService       u:object_r:hal_mtdservice_hwservice:s0
-vendor.xiaomi.hardware.tidaservice::ITidaService    u:object_r:hal_tidaservice_hwservice:s0
 
 # Sensors
 vendor.xiaomi.sensor.citsensorservice::ICitSensorService   u:object_r:vendor_hal_citsensorservice_xiaomi_hwservice:s0

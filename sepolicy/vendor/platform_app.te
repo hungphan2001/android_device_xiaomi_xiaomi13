@@ -52,16 +52,8 @@ allow platform_app hal_misys_default:binder call;
 
 # Mlipay
 hal_client_domain(platform_app, hal_mlipay)
-allow platform_app hal_mfidoca_hwservice:hwservice_manager find;
-allow platform_app hal_mfidoca_default:binder call;
 allow platform_app hal_mlipay_hwservice:hwservice_manager find;
 allow platform_app hal_mlipay_default:binder call;
-allow platform_app hal_mtdservice_hwservice:hwservice_manager find;
-allow platform_app hal_mtdservice_default:binder { call transfer };
-allow platform_app hal_mtdservice_default:fd *;
-allow platform_app hal_tidaservice_hwservice:hwservice_manager find;
-allow platform_app hal_tidaservice_default:binder { call transfer };
-allow platform_app hal_tidaservice_default:fd *;
 
 # Soter
 hal_client_domain(platform_app, vendor_hal_soter);

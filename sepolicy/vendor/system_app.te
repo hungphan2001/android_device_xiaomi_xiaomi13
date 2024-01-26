@@ -56,16 +56,8 @@ allow system_app hal_misys_default:binder transfer;
 
 # Mlipay
 hal_client_domain(system_app, hal_mlipay)
-allow system_app hal_mfidoca_hwservice:hwservice_manager find;
-allow system_app hal_mfidoca_default:binder call;
 allow system_app hal_mlipay_hwservice:hwservice_manager find;
 allow system_app hal_mlipay_default:binder call;
-allow system_app hal_mtdservice_hwservice:hwservice_manager find;
-allow system_app hal_mtdservice_default:binder { call transfer };
-allow system_app hal_mtdservice_default:fd *;
-allow system_app hal_tidaservice_hwservice:hwservice_manager find;
-allow system_app hal_tidaservice_default:binder { call transfer };
-allow system_app hal_tidaservice_default:fd *;
 
 # Thermal
 allow system_app vendor_thermal_data_file:dir create_dir_perms;

@@ -75,16 +75,7 @@
 /(vendor|system/vendor)/bin/hw/vendor.xiaomi.hardware.misys@4.0-service        u:object_r:hal_misys_default_exec:s0
 
 # Mlipay
-/(odm|vendor/odm|vendor|system/vendor)/bin/fidoca        u:object_r:hal_mfidoca_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mlipayd      u:object_r:hal_mlipay_default_exec:s0
 /(odm|vendor/odm|vendor|system/vendor)/bin/mlipayd@1.1  u:object_r:hal_mlipay_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mtd          u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mtd@1.1      u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mtd@1.2      u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/mtd@1.3      u:object_r:hal_mtdservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/tidad        u:object_r:hal_tidaservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/tidad@1.1    u:object_r:hal_tidaservice_default_exec:s0
-/(odm|vendor/odm|vendor|system/vendor)/bin/tidad@1.2    u:object_r:hal_tidaservice_default_exec:s0
 
 # Modem
 /data/vendor/modem(/.*)?                                u:object_r:vendor_modem_data_file:s0
