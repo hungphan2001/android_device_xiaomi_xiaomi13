@@ -104,6 +104,7 @@ DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/vintf/manifest_xiaomi.xml
 
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi13
