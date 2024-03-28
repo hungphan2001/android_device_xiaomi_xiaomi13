@@ -25,14 +25,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# A/B
-ENABLE_AB := true
-ENABLE_VIRTUAL_AB := true
-
+# Enforce generic ramdisk allow list
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
 
-PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := gz
+# A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -50,31 +47,8 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# Board
-TARGET_BOARD_PLATFORM := kalama
-
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
-# QTI components
-TARGET_COMMON_QTI_COMPONENTS := \
-    adreno \
-    alarm \
-    audio \
-    av \
-    bt \
-    display \
-    gps \
-    init \
-    overlay \
-    perf \
-    telephony \
-    usb \
-    wfd \
-    wlan
-
-TARGET_USE_AIDL_QTI_BT_AUDIO := true
-TARGET_USE_AIDL_QTI_HEALTH := true
 
 # Shipping API level
 BOARD_API_LEVEL := 33
@@ -141,9 +115,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
-
-# Display
-TARGET_PANEL_DIMENSION_HAS_EXTRA_PRECISION := true
 
 # Dolby
 PRODUCT_PACKAGES += \
@@ -223,27 +194,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# Logging
-SPAMMY_LOG_TAGS := \
-    MiStcImpl \
-    SDM \
-    SDM-histogram \
-    SRE \
-    WifiHAL \
-    cnss-daemon \
-    libcitsensorservice@2.0-impl \
-    libsensor-displayalgo \
-    libsensor-parseRGB \
-    libsensor-ssccalapi \
-    sensors \
-    vendor.qti.hardware.display.composer-service \
-    vendor.xiaomi.sensor.citsensorservice@2.0-service
-
-ifneq ($(TARGET_BUILD_VARIANT),eng)
-PRODUCT_VENDOR_PROPERTIES += \
-    $(foreach tag,$(SPAMMY_LOG_TAGS),log.tag.$(tag)=E)
-endif
-
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.2.vendor \
@@ -306,16 +256,16 @@ PRODUCT_PACKAGES += \
     Xiaomi13WifiResMainline
 
 # Parts
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     XiaomiParts
 
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Powershare
+# PowerShare
 PRODUCT_PACKAGES += \
-    vendor.aospa.powershare-service
+    vendor.lineage.powershare@1.0-service.xiaomi
 
 # Properties
 PRODUCT_COPY_FILES += \
