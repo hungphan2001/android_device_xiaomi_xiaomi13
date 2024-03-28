@@ -174,13 +174,13 @@ vendor/bin/agmhostless
 vendor/bin/agmplay
 vendor/bin/agmvoiceui
 vendor/bin/cplay
-vendor/lib64/libagm.so
+-vendor/lib64/libagm.so
 vendor/lib64/libagm_compress_plugin.so
 vendor/lib64/libagm_mixer_plugin.so
 vendor/lib64/libagm_pcm_plugin.so
 vendor/lib64/libagmclient.so
 vendor/lib64/libagmmixer.so
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
+-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so
 
 # Audio
@@ -196,9 +196,9 @@ vendor/lib64/lib_misound_asc.so
 vendor/lib64/libadm.so
 vendor/lib64/libar-acdb.so
 vendor/lib64/libar-gpr.so
-vendor/lib64/libar-gsl.so
-vendor/lib64/libar-pal.so
-vendor/lib64/libats.so
+-vendor/lib64/libar-gsl.so
+-vendor/lib64/libar-pal.so
+-vendor/lib64/libats.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libaudiochargerlistener.so
 vendor/lib64/libaudiocloudctrl.so
@@ -213,7 +213,7 @@ vendor/lib64/libfmpal.so
 vendor/lib64/libhfp_pal.so
 vendor/lib64/libkaraokepal.so
 vendor/lib64/liblx-ar_util.so
-vendor/lib64/liblx-osal.so
+-vendor/lib64/liblx-osal.so
 vendor/lib64/libmcs.so
 vendor/lib64/libmisfpsop.so
 vendor/lib64/libmisight.so
@@ -227,7 +227,7 @@ vendor/lib64/libsndcardparser.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libswspatializer_ext.so
 vendor/lib64/libxlog.so
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
+-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.pal@1.0.so
 
 # Audio (Configs)
@@ -2512,7 +2512,7 @@ vendor/lib64/libsxrservice.so
 # Thermal Engine
 vendor/bin/mi_thermald
 vendor/etc/init/hw/init.mi_thermald.rc
-vendor/lib64/libthermalclient.so
+-vendor/lib64/libthermalclient.so
 
 # Thermal Engine (Config)
 odm/etc/setting.xml
@@ -2605,7 +2605,7 @@ odm/firmware/3_thud_P_RTP.bin:vendor/firmware/3_thud_P_RTP.bin
 odm/firmware/4_pop_P_RTP.bin:vendor/firmware/4_pop_P_RTP.bin
 
 # VM Mem
-vendor/lib64/libvmmem.so
+-vendor/lib64/libvmmem.so
 
 # VM Mgr
 vendor/bin/vmmgr
