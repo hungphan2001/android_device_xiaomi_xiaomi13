@@ -2,6 +2,5 @@
 <resources>
     <string-array name="config_skuSupportsSecureNfc">
         <item>fuxi</item>
-        <item>nuwa</item>
     </string-array>
 </resources>

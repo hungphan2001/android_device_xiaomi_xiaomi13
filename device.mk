@@ -101,10 +101,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0.vendor
 
-# Boot Animation
-PRODUCT_COPY_FILES += \
-    vendor/aospa/bootanimation/1440/bootanimation.zip:$(TARGET_COPY_OUT_ODM)/overlayfs/nuwa/product/media/bootanimation.zip
-
 # Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti \
@@ -295,27 +291,19 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Xiaomi13CarrierConfigRes \
     Xiaomi13CarrierConfigResMiui \
-    Xiaomi13DolbysNuwa \
     Xiaomi13Frameworks \
     Xiaomi13FrameworksAOSPA \
-    Xiaomi13FrameworksNuwa \
     Xiaomi13Nfc \
     Xiaomi13SecureElement \
     Xiaomi13Settings \
-    Xiaomi13Settings2210132C \
-    Xiaomi13Settings2210132G \
     Xiaomi13Settings2211133C \
     Xiaomi13Settings2211133G \
     Xiaomi13SettingsAOSPA \
     Xiaomi13SettingsProvider \
-    Xiaomi13SettingsProviderNuwa \
     Xiaomi13SystemUI \
     Xiaomi13SystemUIAOSPA \
-    Xiaomi13SystemUINuwa \
     Xiaomi13WifiRes \
-    Xiaomi13WifiResMainline \
-    Xiaomi13WifiResNuwa \
-    Xiaomi13WifiResNuwaMainline
+    Xiaomi13WifiResMainline
 
 # Parts
 PRODUCT_PACKAGES += \
@@ -331,8 +319,7 @@ PRODUCT_PACKAGES += \
 
 # Properties
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/properties/odm_fuxi.prop:$(TARGET_COPY_OUT_ODM)/etc/build_fuxi.prop \
-    $(LOCAL_PATH)/configs/properties/odm_nuwa.prop:$(TARGET_COPY_OUT_ODM)/etc/build_nuwa.prop
+    $(LOCAL_PATH)/configs/properties/odm_fuxi.prop:$(TARGET_COPY_OUT_ODM)/etc/build_fuxi.prop
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -350,7 +337,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.ambient_temperature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.ambient_temperature.xml \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_nuwa/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
     frameworks/native/data/etc/android.hardware.sensor.hifi_sensors.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.hifi_sensors.xml \
