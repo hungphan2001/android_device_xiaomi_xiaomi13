@@ -209,6 +209,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.identity-V4-ndk.vendor
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -280,6 +286,10 @@ PRODUCT_PACKAGES += \
 # Mlipay
 PRODUCT_PACKAGES += \
     IFAAService
+
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
