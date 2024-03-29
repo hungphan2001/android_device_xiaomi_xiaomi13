@@ -364,6 +364,10 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
+# QCC
+PRODUCT_PACKAGES += \
+    libgrpc++_unsecure.vendor
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
