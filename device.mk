@@ -96,8 +96,7 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libtinycompress \
     libvolumelistener \
-    sound_trigger.primary.kalama \
-    android.hardware.bluetooth.audio-V2-ndk.vendor
+    sound_trigger.primary.kalama
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
@@ -125,9 +124,15 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service
 
 # Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.1.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
+
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 # CAS
 PRODUCT_PACKAGES += \
