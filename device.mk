@@ -334,6 +334,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.xiaomi
 
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    android.hardware.power@1.2.vendor
+
+PRODUCT_COPY_FILES += \
+    vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # Properties
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/properties/odm_fuxi.prop:$(TARGET_COPY_OUT_ODM)/etc/build_fuxi.prop
