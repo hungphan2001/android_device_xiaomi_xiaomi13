@@ -385,20 +385,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGES += \
     Xiaomi13CarrierConfigRes \
-    Xiaomi13CarrierConfigResMiui \
-    Xiaomi13Frameworks \
-    Xiaomi13FrameworksAOSPA \
-    Xiaomi13Nfc \
-    Xiaomi13SecureElement \
-    Xiaomi13Settings \
-    Xiaomi13Settings2211133C \
-    Xiaomi13Settings2211133G \
-    Xiaomi13SettingsAOSPA \
-    Xiaomi13SettingsProvider \
-    Xiaomi13SystemUI \
-    Xiaomi13SystemUIAOSPA \
-    Xiaomi13WifiRes \
-    Xiaomi13WifiResMainline
+    Xiaomi13CarrierConfigResMiui
 
 # Parts
 #PRODUCT_PACKAGES += \
