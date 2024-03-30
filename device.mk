@@ -392,7 +392,8 @@ PRODUCT_PACKAGES += \
     TelecommResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    WifiResTarget
+    WifiResTarget \
+    FrameworksResXiaomi13
 
 # Parts
 #PRODUCT_PACKAGES += \
