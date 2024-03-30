@@ -2185,7 +2185,10 @@ vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
 vendor/lib64/liblearningmodule.so
+vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
