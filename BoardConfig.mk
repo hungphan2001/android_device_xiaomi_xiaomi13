@@ -215,6 +215,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Security
+BOOT_SECURITY_PATCH := 2024-01-01
+VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
+
 # SELinux
 include device/xiaomi/sepolicy/SEPolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
