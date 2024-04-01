@@ -18,3 +18,9 @@ PRODUCT_MODEL := 2211133G
 PRODUCT_NAME := lineage_xiaomi13
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="fuxi_global-user 14 UKQ1.230804.001 V816.0.3.0.UMCMIXM release-keys"
+
+BUILD_FINGERPRINT := Xiaomi/fuxi_global/fuxi:14/UKQ1.230804.001/V816.0.3.0.UMCMIXM:user/release-keys
+
