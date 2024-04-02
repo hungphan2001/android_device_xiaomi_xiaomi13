@@ -273,6 +273,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
     std::string mSku;
     android::base::unique_fd touch_fd_;
     android::base::unique_fd disp_fd_;
+    bool enrolling = false;
     uint32_t lastPressX, lastPressY;
 
     void setFodStatus(int value) {
