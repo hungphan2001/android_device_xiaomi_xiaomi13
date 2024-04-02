@@ -42,7 +42,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DolbySettingsFragment extends PreferenceFragment implements
-        OnPreferenceChangeListener, OnMainSwitchChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnMainSwitchChangeListener {
 
     private static final String TAG = "XiaomiDolbySettingsFragment";
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
@@ -186,7 +186,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
     }
 
     @Override
-    public void onSwitchChanged(Switch switchView, boolean isChecked) {
+    public onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         mDsOn = isChecked;
         mDolbyUtils.setDsOn(isChecked);
         mProfilePref.setEnabled(isChecked);
