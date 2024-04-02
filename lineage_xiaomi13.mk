@@ -14,7 +14,7 @@ $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := xiaomi13
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := 2211133G
+PRODUCT_MODEL := xiaomi13
 PRODUCT_NAME := lineage_xiaomi13
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
