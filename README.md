@@ -66,14 +66,19 @@ It was released in Decenber 2022.
 
 ## Device picture
 
-![fuxi/nuwa](https://www.notebookcheck.com/fileadmin/Notebooks/News/_nc3/Xiaomi_13_Pro_globaler_Launchtermin.jpg "fuxi")
+![fuxi](https://xiaomiworld.vn/upload_images/images/pms_1670745524_72699704.png "fuxi")
 
 ## Copyright
 
 ```
 #
-# Copyright (C) 2023 Paranoid Android
+# Copyright (C) 2024 LineageOS Android
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
+
+## Credits
+@33bca for device tree AOSPA
+@nguyenhung9xdev convert to LineageOS device tree
+@hungphan2001 for some help
