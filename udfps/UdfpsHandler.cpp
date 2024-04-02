@@ -89,9 +89,12 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
   public:
     void init(fingerprint_device_t* device) {
         mDevice = device;
-        mSku = android::base::GetProperty("ro.boot.hardware.sku", "");
         touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
         disp_fd_ = android::base::unique_fd(open(DISP_FEATURE_PATH, O_RDWR));
+
+        std::string fpVendor = android::base::GetProperty("persist.vendor.sys.fp.vendor", "none");
+        LOG(DEBUG) << __func__ << "fingerprint vendor is: " << fpVendor;
+        isFpcFod = fpVendor == "fpc_fod";
 
         // Thread to notify fingeprint hwmodule about fod presses
         std::thread([this]() {
@@ -210,7 +213,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
          * The finger down message is only reliably sent when the screen is turned off, so enable
          * fod_status better late than never.
          */
-        if (mSku == "fuxi") {
+        if (isFpcFod) {
             setFodStatus(FOD_STATUS_ON);
         }
 
@@ -236,12 +239,9 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             if (!enrolling) {
                 setFodStatus(FOD_STATUS_OFF);
             }
-        } else if ((mSku == "fuxi" && (vendorCode == 20 || vendorCode == 22))
-                || (mSku == "nuwa" && (vendorCode == 21 || vendorCode == 23))) {
-            /*
-             * vendorCode = 20/21 waiting for fingerprint authentication
-             * vendorCode = 22/23 waiting for fingerprint enroll
-             */
+        } else if (!isFpcFod && vendorCode == 21) {
+            setFodStatus(FOD_STATUS_ON);
+        } else if (isFpcFod && vendorCode == 22) {
             setFodStatus(FOD_STATUS_ON);
         }
     }
@@ -270,10 +270,10 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 
   private:
     fingerprint_device_t* mDevice;
-    std::string mSku;
     android::base::unique_fd touch_fd_;
     android::base::unique_fd disp_fd_;
     bool enrolling = false;
+    bool isFpcFod;
     uint32_t lastPressX, lastPressY;
 
     void setFodStatus(int value) {
