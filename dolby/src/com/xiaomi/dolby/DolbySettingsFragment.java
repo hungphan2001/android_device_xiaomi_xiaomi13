@@ -186,7 +186,7 @@ public class DolbySettingsFragment extends PreferenceFragment implements
     }
 
     @Override
-    public onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         mDsOn = isChecked;
         mDolbyUtils.setDsOn(isChecked);
         mProfilePref.setEnabled(isChecked);
