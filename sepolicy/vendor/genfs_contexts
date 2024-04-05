@@ -8,9 +8,6 @@ genfscon sysfs "/devices/platform/soc/soc:fingerprint_goodix/wakeup" u:object_r:
 genfscon sysfs "/devices/virtual/touch/touch_dev/fod_press_status" u:object_r:sysfs_tp_fodstatus:s0
 genfscon sysfs "/devices/virtual/touch/tp_dev/fod_status" u:object_r:sysfs_tp_fodstatus:s0
 
-# last_kmsg
-genfscon proc /last_kmsg                                         u:object_r:proc_last_kmsg:s0
-
 # Leds
 genfscon sysfs /devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)? u:object_r:sysfs_leds:s0
 
