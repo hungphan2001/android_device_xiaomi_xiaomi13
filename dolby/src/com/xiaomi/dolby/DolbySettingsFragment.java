@@ -34,7 +34,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
-import com.android.settingslib.widget.OnMainSwitchChangeListener;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import com.xiaomi.dolby.R;
 
@@ -42,7 +43,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DolbySettingsFragment extends PreferenceFragment implements
-        Preference.OnPreferenceChangeListener, CompoundButton.OnMainSwitchChangeListener {
+        Preference.OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
 
     private static final String TAG = "XiaomiDolbySettingsFragment";
     private static final boolean DEBUG = Log.isLoggable(TAG, Log.DEBUG);
