@@ -1534,7 +1534,7 @@ odm/etc/display/qdcm_calib_data_xiaomi_m3_38_0c_0a_sec_cmd_mode_dsc_dsi_panel.js
 odm/etc/mdss_dsi_m3_38_0c_0a_dsc_cmd_mi.xml
 
 # Display (Config)
-product/etc/displayconfig/display_id_4630947006070067843.xml:vendor/etc/displayconfig/display_id_4630947006070067843.xml
+product/etc/displayconfig/display_id_4630947006070067843.xml
 vendor/etc/displayconfig/display_layout_configuration.xml
 vendor/etc/clstc_config_library.xml
 vendor/etc/snapdragon_color_libs_config.xml
