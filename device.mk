@@ -24,6 +24,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Kernel (DTB)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dtb/dtb:dtb.img
+
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
