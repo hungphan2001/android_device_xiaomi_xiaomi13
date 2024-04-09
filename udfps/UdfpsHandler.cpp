@@ -92,10 +92,6 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
         touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
         disp_fd_ = android::base::unique_fd(open(DISP_FEATURE_PATH, O_RDWR));
 
-        std::string fpVendor = android::base::GetProperty("persist.vendor.sys.fp.vendor", "none");
-        LOG(DEBUG) << __func__ << "fingerprint vendor is: " << fpVendor;
-        isFpcFod = fpVendor == "fpc_fod";
-
         // Thread to notify fingeprint hwmodule about fod presses
         std::thread([this]() {
             int fd = open(FOD_PRESS_STATUS_PATH, O_RDONLY);
@@ -135,7 +131,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
                     brightness = brightness_req.brightness;
                 }
                 LOG(DEBUG) << "brightness is: " << (int)brightness_req.brightness;
-                bool requestLowBrightness = !enrolling && brightness < LOW_BRIGHTNESS_THRESHHOLD;
+                bool requestLowBrightness = brightness < LOW_BRIGHTNESS_THRESHHOLD;
 
                 // Request HBM
                 disp_local_hbm_req req;
@@ -213,9 +209,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
          * The finger down message is only reliably sent when the screen is turned off, so enable
          * fod_status better late than never.
          */
-        if (isFpcFod) {
             setFodStatus(FOD_STATUS_ON);
-        }
 
         // Ensure touchscreen is aware of the press state, ideally this is not needed
         setFingerDown(true);
@@ -236,35 +230,18 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             req.base.disp_id = MI_DISP_PRIMARY;
             req.local_hbm_value = LHBM_TARGET_BRIGHTNESS_OFF_FINGER_UP;
             ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
-            if (!enrolling) {
-                setFodStatus(FOD_STATUS_OFF);
-            }
-        } else if (!isFpcFod && vendorCode == 21) {
-            setFodStatus(FOD_STATUS_ON);
-        } else if (isFpcFod && vendorCode == 22) {
+            setFodStatus(FOD_STATUS_OFF);
+        } else if (vendorCode == 20 || vendorCode == 22) {
+            /*
+             * vendorCode = 20 waiting for fingerprint authentication
+             * vendorCode = 22 waiting for fingerprint enroll
+             */
             setFodStatus(FOD_STATUS_ON);
         }
     }
 
     void cancel() {
         LOG(DEBUG) << __func__;
-        enrolling = false;
-    }
-
-    void preEnroll() {
-        LOG(INFO) << __func__;
-        enrolling = true;
-    }
-
-    void enroll() {
-        LOG(INFO) << __func__;
-        enrolling = true;
-    }
-
-    void postEnroll() {
-        LOG(INFO) << __func__;
-        enrolling = false;
-
         setFodStatus(FOD_STATUS_OFF);
     }
 
@@ -272,8 +249,6 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
     fingerprint_device_t* mDevice;
     android::base::unique_fd touch_fd_;
     android::base::unique_fd disp_fd_;
-    bool enrolling = false;
-    bool isFpcFod;
     uint32_t lastPressX, lastPressY;
 
     void setFodStatus(int value) {
