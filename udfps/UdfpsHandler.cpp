@@ -8,7 +8,6 @@
 #define LOG_TAG "UdfpsHandler.xiaomi13"
 
 #include <android-base/logging.h>
-#include <android-base/properties.h>
 #include <android-base/unique_fd.h>
 
 #include <poll.h>
@@ -224,11 +223,14 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
             req.local_hbm_value = LHBM_TARGET_BRIGHTNESS_OFF_FINGER_UP;
             ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
             setFodStatus(FOD_STATUS_OFF);
-        } else if (vendorCode == 20 || vendorCode == 22) {
-            /*
-             * vendorCode = 20 waiting for fingerprint authentication
-             * vendorCode = 22 waiting for fingerprint enroll
-             */
+        }
+
+        /* vendorCode
+         * 21: waiting for finger
+         * 22: finger down
+         * 23: finger up
+         */
+        if (vendorCode == 21) {
             setFodStatus(FOD_STATUS_ON);
         }
     }
