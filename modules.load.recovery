@@ -132,7 +132,6 @@ wcd_usbss_i2c.ko
 qti-fixed-regulator.ko
 proxy-consumer.ko
 qpnp-amoled-regulator.ko
-wl2866d.ko
 rpmh-regulator.ko
 stub-regulator.ko
 debug-regulator.ko
@@ -190,6 +189,7 @@ fts_touch_spi.ko
 pm8941-pwrkey.ko
 qcom-hv-haptics.ko
 goodix_fod.ko
+fpc1555.ko
 rtc-pm8xxx.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
