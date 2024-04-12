@@ -283,3 +283,4 @@ wcd939x_slave_dlkm.ko
 radio-i2c-rtc6226-qca.ko
 ipanetm.ko
 fpc1555.ko
+mi_thermal_interface.ko
