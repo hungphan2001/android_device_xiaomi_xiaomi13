@@ -136,8 +136,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/kalama_GKI.config \
     vendor/fuxi_GKI.config
 
-KERNEL_LTO := none
-
 # Kernel (modules)
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/xiaomi/sm8550-modules
 TARGET_KERNEL_EXT_MODULES := \
