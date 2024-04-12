@@ -2180,11 +2180,14 @@ vendor/lib64/libapengine.so
 vendor/lib64/libappclassifier.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/liblightninglaunches.so
+vendor/lib64/liblmthermallistner.so
 vendor/lib64/libmemperfd.so
+vendor/lib64/libmeters-ns.so
 vendor/lib64/libmeters.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
+vendor/lib64/libprefapps.so
 vendor/lib64/libprekill.so
 vendor/lib64/libprocomp.so
 vendor/lib64/libqapesdk.so
