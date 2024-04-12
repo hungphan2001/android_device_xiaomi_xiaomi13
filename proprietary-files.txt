@@ -185,6 +185,8 @@ vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/audio_cloud_control_white_list.xml
+vendor/lib/hw/audio.primary.kalama.so
+vendor/lib/hw/sound_trigger.primary.kalama.so
 vendor/lib/libadm.so
 vendor/lib/libar-acdb.so
 vendor/lib/libar-gpr.so
