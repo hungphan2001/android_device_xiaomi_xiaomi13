@@ -16,7 +16,8 @@
 #include <fstream>
 #include <thread>
 
-#include "mi_disp.h"
+#include <display/drm/mi_disp.h>
+
 #include "UdfpsHandler.h"
 #include "xiaomi_touch.h"
 
@@ -179,7 +180,7 @@ class XiaomiSm8550UdfpsHander : public UdfpsHandler {
 
                 struct disp_event_resp* response = parseDispEvent(fd);
                 if (response == nullptr) {
-                    continue;
+                   using 110nit fod on low brightness significantly regresses fod unlock speeds continue;
                 }
 
                 if (response->base.type != MI_DISP_EVENT_FOD) {
