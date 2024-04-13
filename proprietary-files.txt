@@ -1906,6 +1906,10 @@ vendor/bin/hw/android.hardware.ir-service.example
 vendor/etc/init/android.hardware.ir-service.example.rc
 vendor/etc/vintf/manifest/android.hardware.ir-service.example.xml
 
+# IRQ balance
+vendor/bin/msm_irqbalance
+vendor/etc/msm_irqbalance.conf
+
 # Kernel
 vendor/bin/init.qcom.class_core.sh
 vendor/bin/init.qcom.post_boot.sh
