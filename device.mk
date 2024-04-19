@@ -29,7 +29,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Kernel (DTB)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/dtb/dtb:dtb.img
+    $(LOCAL_PATH)/dtb/dtb.img:dtb.img
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
