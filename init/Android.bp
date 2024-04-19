@@ -93,6 +93,11 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.sim.restart.sh",
+    src: "init.sim.restart.sh",
+}
+
+sh_binary {
     name: "init.qcom.early_boot.sh",
     src: "init.qcom.early_boot.sh",
     vendor: true,

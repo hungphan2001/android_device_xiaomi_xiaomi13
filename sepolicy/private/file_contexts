@@ -1,2 +1,5 @@
 # MIUI offline charging
 /system/bin/chargeonlymode                    u:object_r:charger_exec:s0
+
+# Simcard init scripts
+/system/bin/init\.sim\.restart\.sh                              u:object_r:init_sim_restart_exec:s0

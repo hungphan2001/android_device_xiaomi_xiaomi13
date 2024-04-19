@@ -298,6 +298,7 @@ PRODUCT_PACKAGES += \
     init.mi_perf.rc \
     init.mi_service.rc \
     init.mi_udfps.rc \
+    init.sim.restart.sh \
     init.qcom.early_boot.sh \
     init.qcom.rc \
     init.qcom.recovery.rc \
