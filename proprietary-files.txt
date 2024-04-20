@@ -2799,11 +2799,11 @@ vendor/lib64/libsxrservice.so
 
 # Thermal Engine
 vendor/bin/mi_thermald
+vendor/bin/thermal-engine-v2
 vendor/etc/init/hw/init.mi_thermald.rc
--vendor/lib64/libthermalclient.so
+vendor/etc/init/init_thermal-engine-v2.rc
 
 # Thermal Engine (Config)
-odm/etc/setting.xml
 odm/etc/thermal-4k.conf
 odm/etc/thermal-abnormal.conf
 odm/etc/thermal-arvr.conf
