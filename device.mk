@@ -397,7 +397,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ApertureResxiaomi13 \
     Xiaomi13CarrierConfigRes \
-    Xiaomi13CarrierConfigResMiui \
     FrameworksResCommon \
     FrameworksResTarget \
     SystemUIResCommon \
