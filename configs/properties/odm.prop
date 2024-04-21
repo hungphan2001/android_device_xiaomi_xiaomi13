@@ -1,2 +1,5 @@
 # QC Value Addons
 ro.vendor.qti.va_odm.support=1
+
+# RIL
+persist.vendor.radio.dynamic_sar=1

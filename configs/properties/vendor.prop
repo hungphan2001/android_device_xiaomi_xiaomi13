@@ -281,6 +281,7 @@ persist.vendor.radio.sib16_support=1
 persist.vendor.radio.redir_party_num=0
 ro.telephony.default_network=33,33
 ro.vendor.radio.build_profile=u-stable
+ro.vendor.radio.build_region=global
 ro.vendor.radio.self_dev_flag=1
 
 # Sensors
