@@ -1,0 +1,3 @@
+allow vendor_diag-router vendor_modem_data_file:dir rw_dir_perms;
+allow vendor_diag-router vendor_modem_data_file:fifo_file { create getattr open read unlink write };
+allow vendor_diag-router vendor_modem_data_file:file { create getattr open read unlink write };
