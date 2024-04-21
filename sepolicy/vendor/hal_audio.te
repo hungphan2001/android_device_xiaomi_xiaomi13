@@ -26,6 +26,3 @@ set_prop(hal_audio_default, vendor_audio_prop)
 
 # Dontaudit Audio to read default_prop
 dontaudit hal_audio_default default_prop:file read;
-
-allow hal_audio_default debugfs:dir { open read };
-allow hal_audio_default debugfs:file r_file_perms;

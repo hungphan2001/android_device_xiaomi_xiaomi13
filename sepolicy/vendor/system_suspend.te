@@ -1,4 +1,2 @@
 allow system_suspend_server charger:binder transfer;
 allow system_suspend_server healthd:binder transfer;
-allow system_suspend sysfs:dir { open read };
-allow system_suspend sysfs:file { getattr };
