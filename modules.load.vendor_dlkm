@@ -163,6 +163,7 @@ block2mtd.ko
 mtd_blkdevs.ko
 mtdblock.ko
 slimbus.ko
+smcinvoke_dlkm.ko
 slim-qcom-ngd-ctrl.ko
 hwmon.ko
 qti_amoled_ecm.ko

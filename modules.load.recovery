@@ -264,6 +264,7 @@ mtd_blkdevs.ko
 mtdblock.ko
 mtdoops.ko
 slimbus.ko
+smcinvoke_dlkm.ko
 slim-qcom-ngd-ctrl.ko
 hwmon.ko
 qti_amoled_ecm.ko
