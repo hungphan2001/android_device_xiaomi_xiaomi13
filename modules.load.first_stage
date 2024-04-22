@@ -8,7 +8,6 @@ clk-rpmh.ko
 qcom_rpmh.ko
 cmd-db.ko
 qcom_ipc_logging.ko
-gcc-crow.ko
 clk-qcom.ko
 gdsc-regulator.ko
 debug-regulator.ko
@@ -38,7 +37,6 @@ crypto-qti-hwkm.ko
 hwkm.ko
 tmecom-intf.ko
 dcc_v2.ko
-dispcc-crow.ko
 dispcc-kalama.ko
 tcsrcc-kalama.ko
 videocc-kalama.ko
@@ -59,16 +57,13 @@ mem_buf.ko
 qcom_dma_heaps.ko
 msm_dma_iommu_mapping.ko
 memory_dump_v2.ko
-pinctrl-crow.ko
 pinctrl-msm.ko
 pinctrl-kalama.ko
 qnoc-kalama.ko
 qnoc-qos.ko
-qnoc-crow.ko
 nvmem_qcom-spmi-sdam.ko
 phy-qcom-ufs.ko
 phy-qcom-ufs-qmp-v4-kalama.ko
-phy-qcom-ufs-qmp-v4-crow.ko
 phy-qcom-ufs-qrbtc-sdm845.ko
 qcom-dload-mode.ko
 qcom_hwspinlock.ko

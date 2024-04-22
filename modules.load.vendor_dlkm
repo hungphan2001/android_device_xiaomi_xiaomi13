@@ -22,9 +22,6 @@ phy-qcom-ufs-qmp-v4-kona.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
-gpucc-crow.ko
-videocc-crow.ko
-camcc-crow.ko
 gpucc-kalama.ko
 bam_dma.ko
 msm_gpi.ko
@@ -66,11 +63,9 @@ rimps_log.ko
 panel_event_notifier.ko
 dmesg_dumper.ko
 sys_pm_vx.ko
-plh_scmi.ko
 qdss_bridge.ko
 usb_f_qdss.ko
 dwc3-msm.ko
-wcd_usbss_i2c.ko
 ucsi_glink.ko
 redriver.ko
 fsa4480-i2c.ko
@@ -83,9 +78,7 @@ spcom.ko
 msm_performance.ko
 qbt_handler.ko
 hung_task_enh.ko
-qfprom-sys.ko
 qti-fixed-regulator.ko
-qpnp-amoled-regulator.ko
 qti-ocp-notifier.ko
 msm_geni_serial.ko
 frpc-adsprpc.ko
@@ -95,7 +88,6 @@ lt9611uxc.ko
 zram.ko
 qseecom_proxy.ko
 hwid.ko
-qcom-i2c-pmic.ko
 sg.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
@@ -151,10 +143,8 @@ qcom-cpufreq-hw-debug.ko
 qcom_lpm.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
-leds-qpnp-vibrator-ldo.ko
 memlat_vendor.ko
 cpufreq_stats_vendor.ko
-plh_vendor.ko
 ep_pcie_drv.ko
 mhi_dev_drv.ko
 mhi_dev_net.ko
@@ -164,7 +154,6 @@ qcom_q6v5_pas.ko
 gh_irq_lend.ko
 qcom-spmi-adc5-gen3.ko
 qcom-vadc-common.ko
-qti-glink-adc.ko
 industrialio-buffer-cb.ko
 nvmem_qfprom.ko
 icc-test.ko
