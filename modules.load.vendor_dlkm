@@ -78,6 +78,7 @@ spcom.ko
 msm_performance.ko
 qbt_handler.ko
 hung_task_enh.ko
+hvc_gunyah.ko
 qti-fixed-regulator.ko
 qti-ocp-notifier.ko
 msm_geni_serial.ko
@@ -205,7 +206,6 @@ qce50_dlkm.ko
 rmnet_sch.ko
 qcedev-mod_dlkm.ko
 nxp-nci.ko
-smcinvoke_dlkm.ko
 mbhc_dlkm.ko
 rndisipam.ko
 ipam.ko
