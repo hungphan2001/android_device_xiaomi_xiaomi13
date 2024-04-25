@@ -274,3 +274,8 @@ radio-i2c-rtc6226-qca.ko
 ipanetm.ko
 fpc1555.ko
 mi_thermal_interface.ko
+mi_log.ko
+mi_mempool.ko
+mi_exception_log.ko
+process_exit.ko
+binder_prio.ko
