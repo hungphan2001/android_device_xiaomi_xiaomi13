@@ -1304,6 +1304,10 @@ odm/firmware/fuxi_s5k3k1_bu24721_ois.prog
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib/libcdsp_default_listener.so
+vendor/lib/libcdsprpc.so
+vendor/lib/libmdsprpc.so
+vendor/lib/libsdsprpc.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -1474,12 +1478,12 @@ vendor/firmware/evass.mdt
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
 # Connection Security
 vendor/bin/qwesd
 vendor/bin/ssgqmigd
-vendor/bin/ssgqmigd64
 vendor/bin/ssgtzd
 vendor/etc/init/qwesd.rc
 vendor/etc/init/ssgtzd.rc
@@ -1810,7 +1814,6 @@ vendor/lib64/liblocation_api.so
 vendor/lib64/liblocation_api_msg.so
 vendor/lib64/liblocation_client_api.so
 vendor/lib64/liblocation_integration_api.so
-vendor/lib64/liblocation_qesdk.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblocdiagiface.so
@@ -2181,6 +2184,21 @@ vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
+vendor/lib/libgamepoweroptfeature.so
+vendor/lib/libperfconfig.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libperfioctl.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/libqti-iopd.so
+vendor/lib/libqti-perfd-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib/libqti-utils.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
+vendor/lib/vendor.qti.hardware.power.powermodule@1.0.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
+vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libapengine.so
 vendor/lib64/libappclassifier.so
@@ -2204,10 +2222,12 @@ vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
+vendor/lib64/libreffeature.so
 vendor/lib64/libsilkyscrolls.so
 vendor/lib64/libsplh.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
+vendor/lib64/vendor.qti.hardware.power.powermodule@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
@@ -2250,6 +2270,7 @@ vendor/etc/init/qesdk-manager.rc
 vendor/etc/seccomp_policy/qesdk.policy
 vendor/lib/libqesdk2_0.so
 vendor/lib/libqesdk_manager.so
+vendor/lib64/liblocation_qesdk.so
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/libqti-qesdk-secure.so
@@ -2295,6 +2316,7 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
+vendor/lib64/libsmemlog.so
 vendor/lib64/libsubsystem_control.so
 
 # QTI
@@ -2440,8 +2462,6 @@ vendor/bin/qtisetprop
 vendor/bin/rmt_storage
 vendor/bin/shsusrd
 vendor/bin/tftp_server
-vendor/etc/xiaomi_ecc_list.xml
-vendor/etc/xiaomi_ecc_list_preference.xml
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/init/dataadpl.rc
@@ -2505,6 +2525,8 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.am.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.ims.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/etc/telephony_packages.xml
+vendor/etc/xiaomi_ecc_list.xml
+vendor/etc/xiaomi_ecc_list_preference.xml
 vendor/lib64/com.qualcomm.qti.imscmservice@1.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so
 vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so
@@ -2545,6 +2567,7 @@ vendor/lib64/libnetmgrportutils.so
 vendor/lib64/libnetmgrxfrmutils.so
 vendor/lib64/libnfnetlink.so
 vendor/lib64/libnlnetmgr.so
+vendor/lib64/liboemaids_vendor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcrilDataModule.so
@@ -2893,6 +2916,14 @@ odm/firmware/4_pop_P_RTP.bin:vendor/firmware/4_pop_P_RTP.bin
 vendor/bin/vmmgr
 vendor/etc/init/vmmgr.rc
 vendor/etc/vmmgr.conf
+
+# Video
+vendor/lib/libstreamparser.so
+vendor/lib/libvideooptfeature.so
+vendor/lib/libvideotxr.so
+vendor/lib/libvideoutils.so
+vendor/lib64/libvideotxr.so
+vendor/lib64/libvideoutils.so
 
 # VPP
 vendor/bin/vppservice
