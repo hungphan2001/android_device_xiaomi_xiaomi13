@@ -428,7 +428,7 @@ PRODUCT_PACKAGES += \
     SettingsResXiaomi13
 
 # Parts
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
     XiaomiParts
 
 # RenderScript
